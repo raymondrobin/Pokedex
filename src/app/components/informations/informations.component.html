@@ -1,0 +1,18 @@
+<div class="page-header">
+  <h1>Pokemon</h1>
+</div>
+<div class="row" *ngIf="pokemon">
+  <div class="panel panel-default">
+    <div class="card mb-3">
+      <h3 class="card-header">{{pokemon.name | uppercase}}</h3>
+      <div class="card-body">
+        <h5 class="card-title">Id: #{{pokemon.id}}</h5>
+      </div>
+      <img style="width: 50%; diplay: block;" src="{{pokemon.sprite}}" alt="pokemon image">
+      <div class="card-body" *ngFor="let statistic of pokemon.stats">
+        <p class="card-text">{{statistic.stat.name | uppercase}}</p>
+        <p class="card-text">{{statistic.base_stat}}</p>
+      </div>
+    </div>
+  </div>
+</div>

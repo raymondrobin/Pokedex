@@ -1,0 +1,36 @@
+<div class="page-header">
+  <h1>Pokemon</h1>
+</div>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="card mb-3" *ngFor="let pokemon of pokemons">
+      <a [routerLink]="['/pokemones', pokemon.id]">
+        <h3 class="card-header">{{pokemon.name | uppercase}}</h3>
+      </a>
+      <div class="card-body">
+        <h5 class="card-id">Id: #{{pokemon.id}}</h5>
+      </div>
+      <img style="width: 50%; diplay: block;" src="{{pokemon.sprite}}" alt="pokemon image">
+      <div class="card-body" *ngFor="let stat of pokemon.stats">
+        <p class="card-text">{{stat.stat.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- <div class="row">
+  <div class="panel">
+    <div class="card mb-3" *ngFor="let pokemon of pokemons">
+      <a [routerLink]="['/pokemones', pokemon.id]">
+        <h3 class="card-header">{{pokemon.name}}</h3>
+      </a>
+      <div class="card-body">
+        <h5 class="card-title">Id: #{{pokemon.id}}</h5>
+      </div>
+      <img style="width: 50%; diplay: block;" src="{{pokemon.sprite}}" alt="pokemon image">
+      <div class="card-body">
+        <p class="card-text">{{stat.stat.name}}</p>
+      </div>
+    </div>
+</div>  -->

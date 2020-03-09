@@ -1,0 +1,9 @@
+.panel.panel-default{
+  width: 100%;
+}
+
+.card.mb-3{
+  width: 70%;
+  border: 2px solid white;
+  margine: 10px;
+}

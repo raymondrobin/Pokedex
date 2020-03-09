@@ -1,0 +1,13 @@
+.panel.panel-default{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.card.mb-3{
+  width: 30%;
+  border: solid 2px white;
+
+}
